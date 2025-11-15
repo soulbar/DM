@@ -6,176 +6,38 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: 联通-80-WS
+  type: vless
+  server: 104.16.191.2
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 移动-80-WS
+  type: vless
+  server: 104.19.77.18
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 联通-443-Trojan-WS-TLS
+  type: trojan
+  server: 104.16.191.2
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
 - name: 联通-80-Trojan-WS
   type: trojan
-  server: 104.17.94.212
+  server: 104.16.191.2
   port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 移动-80-WS
-  type: vless
-  server: 104.19.175.221
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
   udp: true
 - name: 移动-443-WS-TLS
   type: vless
-  server: 104.19.174.91
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 联通-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.18.127.171
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-443-WS-TLS
-  type: vless
-  server: 104.17.94.68
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 移动-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.17.255.48
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-443-WS-TLS
-  type: vless
-  server: 104.16.31.253
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 电信-80-WS
-  type: vless
-  server: 104.18.46.114
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-80-Trojan-WS
-  type: trojan
-  server: 104.17.255.48
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 联通-80-WS
-  type: vless
-  server: 104.19.191.85
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-80-WS
-  type: vless
-  server: 104.19.174.91
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 联通-80-WS
-  type: vless
-  server: 104.16.31.253
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-80-WS
-  type: vless
-  server: 104.25.190.240
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-80-Trojan-WS
-  type: trojan
-  server: 104.19.175.221
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 移动-80-Trojan-WS
-  type: trojan
-  server: 104.25.190.240
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 移动-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.25.190.240
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 移动-80-WS
-  type: vless
-  server: 104.17.255.48
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 联通-80-WS
-  type: vless
-  server: 104.17.94.68
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-80-Trojan-WS
-  type: trojan
-  server: 104.17.14.71
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 电信-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.17.254.240
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-80-WS
-  type: vless
-  server: 104.18.127.171
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 联通-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.17.94.212
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 移动-443-WS-TLS
-  type: vless
-  server: 104.17.14.71
+  server: 104.24.222.9
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -185,7 +47,7 @@ proxies:
   servername: boy.solobar.dpdns.org
 - name: 移动-443-WS-TLS
   type: vless
-  server: 104.19.175.221
+  server: 104.19.77.18
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -193,24 +55,61 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: 联通-443-Trojan-WS-TLS
+- name: 联通-80-Trojan-WS
   type: trojan
-  server: 104.19.191.85
-  port: 443
+  server: 104.17.239.85
+  port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
   udp: true
-- name: 电信-80-WS
+- name: 联通-80-WS
   type: vless
-  server: 104.17.254.240
+  server: 104.17.189.107
   port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
   udp: true
-- name: 电信-443-WS-TLS
+- name: 移动-80-WS
   type: vless
-  server: 104.16.31.58
+  server: 104.25.222.98
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 移动-443-WS-TLS
+  type: vless
+  server: 104.17.94.226
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: 联通-443-WS-TLS
+  type: vless
+  server: 104.16.191.2
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: 移动-443-WS-TLS
+  type: vless
+  server: 104.25.222.98
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: 联通-443-WS-TLS
+  type: vless
+  server: 104.17.189.107
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -220,195 +119,62 @@ proxies:
   servername: boy.solobar.dpdns.org
 - name: 移动-80-WS
   type: vless
-  server: 104.17.14.71
+  server: 104.25.205.140
   port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
   udp: true
-- name: 电信-443-Trojan-WS-TLS
+- name: 联通-443-Trojan-WS-TLS
   type: trojan
-  server: 104.16.31.58
+  server: 104.17.239.85
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: 电信-80-WS
-  type: vless
-  server: 104.16.31.58
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 联通-443-WS-TLS
-  type: vless
-  server: 104.17.94.212
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 电信-443-WS-TLS
-  type: vless
-  server: 104.17.254.240
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 电信-80-Trojan-WS
+- name: 移动-443-Trojan-WS-TLS
   type: trojan
-  server: 104.17.254.240
-  port: 80
+  server: 104.19.77.18
+  port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
   udp: true
 - name: 移动-443-Trojan-WS-TLS
   type: trojan
-  server: 104.17.14.71
+  server: 104.25.205.140
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
 - name: 联通-443-Trojan-WS-TLS
   type: trojan
-  server: 104.16.31.253
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-443-WS-TLS
-  type: vless
-  server: 104.18.127.171
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 移动-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.19.175.221
+  server: 104.17.31.239
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
 - name: 联通-80-Trojan-WS
   type: trojan
-  server: 104.18.127.171
+  server: 104.17.31.239
   port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 联通-80-Trojan-WS
-  type: trojan
-  server: 104.17.94.68
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 联通-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.17.94.68
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-80-Trojan-WS
-  type: trojan
-  server: 104.19.191.85
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 电信-80-Trojan-WS
-  type: trojan
-  server: 104.16.31.58
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 电信-443-WS-TLS
-  type: vless
-  server: 104.18.46.114
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 联通-80-WS
-  type: vless
-  server: 104.17.94.212
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-- name: 移动-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.19.174.91
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: 联通-80-Trojan-WS
-  type: trojan
-  server: 104.16.31.253
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 移动-443-WS-TLS
-  type: vless
-  server: 104.25.190.240
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 电信-80-Trojan-WS
-  type: trojan
-  server: 104.18.46.114
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: 移动-443-WS-TLS
-  type: vless
-  server: 104.17.255.48
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: 电信-443-Trojan-WS-TLS
-  type: trojan
-  server: 104.18.46.114
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
   udp: true
 - name: 移动-80-Trojan-WS
   type: trojan
-  server: 104.19.174.91
+  server: 104.19.77.18
   port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   udp: true
-- name: 加入频道@kejiland00-443-Trojan-WS-TLS
+- name: 联通-443-Trojan-WS-TLS
   type: trojan
-  server: saas.sin.fan
+  server: 104.17.189.107
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
 - name: 联通-443-WS-TLS
   type: vless
-  server: 104.19.191.85
+  server: 104.17.111.43
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -416,9 +182,9 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: 加入频道@kejiland00-443-WS-TLS
+- name: 移动-443-WS-TLS
   type: vless
-  server: saas.sin.fan
+  server: 104.25.205.140
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -426,13 +192,130 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: US-443-Trojan-WS-TLS
+- name: 移动-80-Trojan-WS
   type: trojan
-  server: 149.248.7.208
+  server: 104.17.94.226
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 联通-80-Trojan-WS
+  type: trojan
+  server: 104.17.111.43
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 移动-80-WS
+  type: vless
+  server: 104.24.222.9
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 联通-443-Trojan-WS-TLS
+  type: trojan
+  server: 104.17.111.43
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
+- name: 联通-80-Trojan-WS
+  type: trojan
+  server: 104.17.189.107
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 移动-80-Trojan-WS
+  type: trojan
+  server: 104.25.205.140
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 移动-80-WS
+  type: vless
+  server: 104.17.94.226
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 移动-80-Trojan-WS
+  type: trojan
+  server: 104.24.222.9
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 移动-80-Trojan-WS
+  type: trojan
+  server: 104.25.222.98
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 移动-443-Trojan-WS-TLS
+  type: trojan
+  server: 104.24.222.9
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: 移动-443-Trojan-WS-TLS
+  type: trojan
+  server: 104.25.222.98
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: 移动-443-Trojan-WS-TLS
+  type: trojan
+  server: 104.17.94.226
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: 联通-80-WS
+  type: vless
+  server: 104.17.111.43
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 联通-80-WS
+  type: vless
+  server: 104.17.239.85
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 联通-80-WS
+  type: vless
+  server: 104.17.31.239
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: 联通-443-WS-TLS
+  type: vless
+  server: 104.17.239.85
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: 联通-443-WS-TLS
+  type: vless
+  server: 104.17.31.239
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
 - name: US-17628-Trojan-WS-TLS
   type: trojan
   server: 142.171.75.222
@@ -440,10 +323,10 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: US-17628-WS-TLS
+- name: US-443-WS-TLS
   type: vless
-  server: 142.171.75.222
-  port: 17628
+  server: 149.248.7.208
+  port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
@@ -457,9 +340,16 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
+- name: US-443-Trojan-WS-TLS
+  type: trojan
+  server: 149.248.7.208
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
 - name: US-443-WS-TLS
   type: vless
-  server: 149.248.7.208
+  server: 142.171.140.152
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -467,10 +357,10 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: US-443-WS-TLS
+- name: US-17628-WS-TLS
   type: vless
-  server: 142.171.140.152
-  port: 443
+  server: 142.171.75.222
+  port: 17628
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
@@ -494,16 +384,6 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: CA-16504-WS-TLS
-  type: vless
-  server: 150.230.27.23
-  port: 16504
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
 - name: US-38945-Trojan-WS-TLS
   type: trojan
   server: 141.148.181.105
@@ -515,6 +395,92 @@ proxies:
   type: vless
   server: 141.148.181.105
   port: 38945
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: cf.zhetengsha.eu.org-80-Trojan-WS
+  type: trojan
+  server: cf.zhetengsha.eu.org
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: cf.zhetengsha.eu.org-443-Trojan-WS-TLS
+  type: trojan
+  server: cf.zhetengsha.eu.org
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: cf.090227.xyz-80-Trojan-WS
+  type: trojan
+  server: cf.090227.xyz
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: 加入频道@kejiland00-443-Trojan-WS-TLS
+  type: trojan
+  server: saas.sin.fan
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: Snippets-vless
+  type: vless
+  server: cf.008500.xyz
+  port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: snip.soulbar.ggff.net
+- name: US-41389-WS-TLS
+  type: vless
+  server: 172.83.159.4
+  port: 41389
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: US-41389-Trojan-WS-TLS
+  type: trojan
+  server: 172.83.159.4
+  port: 41389
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: cf.0sm.com-80-Trojan-WS
+  type: trojan
+  server: cf.0sm.com
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: cf.090227.xyz-443-Trojan-WS-TLS
+  type: trojan
+  server: cf.090227.xyz
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: Snippets-vless
+  type: vless
+  server: store.ubi.com
+  port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: snip.soulbar.ggff.net
+- name: CA-16504-WS-TLS
+  type: vless
+  server: 150.230.27.23
+  port: 16504
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
@@ -545,91 +511,35 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: US-41389-Trojan-WS-TLS
+- name: xn--b6gac.eu.org-80-Trojan-WS
   type: trojan
-  server: 172.83.159.4
-  port: 41389
+  server: xn--b6gac.eu.org
+  port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
   udp: true
-- name: US-41389-WS-TLS
-  type: vless
-  server: 172.83.159.4
-  port: 41389
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: Snippets-vless
-  type: vless
-  server: cf.008500.xyz
-  port: 443
-  uuid: 204774c0-99c5-4454-bbd8-86775343a538
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: snip.soulbar.ggff.net
-- name: NL-443-Trojan-WS-TLS
+- name: xn--b6gac.eu.org-443-Trojan-WS-TLS
   type: trojan
-  server: 146.0.73.211
+  server: xn--b6gac.eu.org
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: NL-443-WS-TLS
-  type: vless
-  server: 93.183.88.193
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: NL-443-Trojan-WS-TLS
+- name: cf.877771.xyz-80-Trojan-WS
   type: trojan
-  server: 147.45.173.149
-  port: 443
+  server: cf.877771.xyz
+  port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
   udp: true
-- name: NL-443-WS-TLS
-  type: vless
-  server: 147.45.173.149
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: GB-42515-WS-TLS
-  type: vless
-  server: 150.107.201.226
-  port: 42515
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: JP-8443-WS-TLS
-  type: vless
-  server: 152.69.199.70
-  port: 8443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: GB-42515-Trojan-WS-TLS
+- name: cdn.tzpro.xyz-80-Trojan-WS
   type: trojan
-  server: 150.107.201.226
-  port: 42515
+  server: cdn.tzpro.xyz
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: cf.877771.xyz-443-Trojan-WS-TLS
+  type: trojan
+  server: cf.877771.xyz
+  port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
@@ -640,13 +550,6 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: NL-443-Trojan-WS-TLS
-  type: trojan
-  server: 81.22.132.254
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
 - name: JP-8443-Trojan-WS-TLS
   type: trojan
   server: 152.69.199.70
@@ -654,78 +557,10 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: IT-10443-Trojan-WS-TLS
-  type: trojan
-  server: 179.43.176.163
-  port: 10443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: NL-443-WS-TLS
+- name: JP-8443-WS-TLS
   type: vless
-  server: 146.0.73.211
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: IT-10443-WS-TLS
-  type: vless
-  server: 179.43.176.163
-  port: 10443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: NL-443-Trojan-WS-TLS
-  type: trojan
-  server: 93.183.88.193
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: NL-443-WS-TLS
-  type: vless
-  server: 146.103.33.38
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: NL-443-WS-TLS
-  type: vless
-  server: 146.103.33.57
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: NL-443-Trojan-WS-TLS
-  type: trojan
-  server: 146.103.33.57
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: DE-2053-Trojan-WS-TLS
-  type: trojan
-  server: 88.218.76.250
-  port: 2053
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: DE-2053-WS-TLS
-  type: vless
-  server: 88.218.76.250
-  port: 2053
+  server: 152.69.199.70
+  port: 8443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
@@ -742,9 +577,57 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
+- name: cdn.tzpro.xyz-443-Trojan-WS-TLS
+  type: trojan
+  server: cdn.tzpro.xyz
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: GB-42515-WS-TLS
+  type: vless
+  server: 150.107.201.226
+  port: 42515
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: GB-42515-Trojan-WS-TLS
+  type: trojan
+  server: 150.107.201.226
+  port: 42515
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
 - name: NL-443-Trojan-WS-TLS
   type: trojan
-  server: 146.103.33.38
+  server: 81.22.132.254
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: NL-443-Trojan-WS-TLS
+  type: trojan
+  server: 146.0.73.211
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: NL-443-WS-TLS
+  type: vless
+  server: 146.0.73.211
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: NL-443-Trojan-WS-TLS
+  type: trojan
+  server: 147.45.173.149
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
@@ -759,6 +642,128 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
+- name: NL-443-Trojan-WS-TLS
+  type: trojan
+  server: 93.183.88.193
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: NL-443-WS-TLS
+  type: vless
+  server: 147.45.173.149
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: NL-443-WS-TLS
+  type: vless
+  server: 93.183.88.193
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: NL-443-Trojan-WS-TLS
+  type: trojan
+  server: 146.103.33.57
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: NL-443-WS-TLS
+  type: vless
+  server: 146.103.33.57
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: NL-443-WS-TLS
+  type: vless
+  server: 146.103.33.38
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: NL-443-Trojan-WS-TLS
+  type: trojan
+  server: 146.103.33.38
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: DE-8443-WS-TLS
+  type: vless
+  server: 88.218.78.162
+  port: 8443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: DE-2053-WS-TLS
+  type: vless
+  server: 88.218.76.250
+  port: 2053
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: DE-443-WS-TLS
+  type: vless
+  server: 94.228.169.108
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: DE-443-Trojan-WS-TLS
+  type: trojan
+  server: 88.218.78.34
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: DE-2053-Trojan-WS-TLS
+  type: trojan
+  server: 88.218.76.250
+  port: 2053
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: IT-10443-WS-TLS
+  type: vless
+  server: 179.43.176.163
+  port: 10443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: IT-10443-Trojan-WS-TLS
+  type: trojan
+  server: 179.43.176.163
+  port: 10443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
 - name: DE-8443-Trojan-WS-TLS
   type: trojan
   server: 88.218.78.162
@@ -776,16 +781,13 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: SE-8443-WS-TLS
-  type: vless
-  server: 141.98.169.24
-  port: 8443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
+- name: DE-443-Trojan-WS-TLS
+  type: trojan
+  server: 94.228.169.108
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
   udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
 - name: SE-48004-Trojan-WS-TLS
   type: trojan
   server: 139.28.221.213
@@ -793,19 +795,16 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: SE-48004-WS-TLS
-  type: vless
-  server: 139.28.221.213
-  port: 48004
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
+- name: AT-443-Trojan-WS-TLS
+  type: trojan
+  server: 94.177.8.3
+  port: 443
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
   udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: SE-2053-WS-TLS
+- name: PL-2053-WS-TLS
   type: vless
-  server: 139.28.220.16
+  server: 151.115.61.151
   port: 2053
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -813,20 +812,27 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: DE-8443-WS-TLS
+- name: SG-61731-Trojan-WS-TLS
+  type: trojan
+  server: 168.138.181.188
+  port: 61731
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  sni: boy.solobar.dpdns.org
+  udp: true
+- name: SG-61731-WS-TLS
   type: vless
-  server: 88.218.78.162
-  port: 8443
+  server: 168.138.181.188
+  port: 61731
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
   - ws
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: AT-443-Trojan-WS-TLS
+- name: PL-2053-Trojan-WS-TLS
   type: trojan
-  server: 94.177.8.3
-  port: 443
+  server: 151.115.61.151
+  port: 2053
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
@@ -847,23 +853,19 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: SE-2053-Trojan-WS-TLS
-  type: trojan
-  server: 139.28.220.16
-  port: 2053
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: DE-443-Trojan-WS-TLS
-  type: trojan
-  server: 88.218.78.34
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: PL-2053-WS-TLS
+- name: SE-8443-WS-TLS
   type: vless
-  server: 151.115.61.151
+  server: 141.98.169.24
+  port: 8443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: SE-2053-WS-TLS
+  type: vless
+  server: 139.28.220.16
   port: 2053
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   network:
@@ -871,9 +873,19 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: PL-2053-Trojan-WS-TLS
+- name: SE-48004-WS-TLS
+  type: vless
+  server: 139.28.221.213
+  port: 48004
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: SE-2053-Trojan-WS-TLS
   type: trojan
-  server: 151.115.61.151
+  server: 139.28.220.16
   port: 2053
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
@@ -895,73 +907,13 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: cf.zhetengsha.eu.org-80-Trojan-WS
+- name: cf.0sm.com-443-Trojan-WS-TLS
   type: trojan
-  server: cf.zhetengsha.eu.org
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cf.zhetengsha.eu.org-443-Trojan-WS-TLS
-  type: trojan
-  server: cf.zhetengsha.eu.org
+  server: cf.0sm.com
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: xn--b6gac.eu.org-80-Trojan-WS
-  type: trojan
-  server: xn--b6gac.eu.org
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: xn--b6gac.eu.org-443-Trojan-WS-TLS
-  type: trojan
-  server: xn--b6gac.eu.org
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: SG-61731-WS-TLS
-  type: vless
-  server: 168.138.181.188
-  port: 61731
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: boy.solobar.dpdns.org
-- name: SG-61731-Trojan-WS-TLS
-  type: trojan
-  server: 168.138.181.188
-  port: 61731
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: cf.877771.xyz-80-Trojan-WS
-  type: trojan
-  server: cf.877771.xyz
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cf.877771.xyz-443-Trojan-WS-TLS
-  type: trojan
-  server: cf.877771.xyz
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: vless-reality
-  type: vless
-  server: 103.99.52.140
-  port: 443
-  uuid: c16cf553-264e-4337-da22-9396c03f0a7a
-  flow: xtls-rprx-vision
-  network:
-  - tcp
-  udp: true
-  tls: true
-  servername: go.microsoft.com
 - name: IN-2053-WS-TLS
   type: vless
   server: 148.113.43.228
@@ -979,20 +931,9 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: trojan
-  type: trojan
-  server: 103.99.52.140
-  port: 18815
-  password: uCPeUyOJOB
-  sni: bing.com
-  udp: true
-  alpn:
-  - h3
-  - h2
-  - http/1.1
 - name: Snippets-vless
   type: vless
-  server: store.ubi.com
+  server: cf.130519.xyz
   port: 443
   uuid: 204774c0-99c5-4454-bbd8-86775343a538
   network:
@@ -1000,42 +941,6 @@ proxies:
   udp: true
   tls: true
   servername: snip.soulbar.ggff.net
-- name: cf.090227.xyz-80-Trojan-WS
-  type: trojan
-  server: cf.090227.xyz
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cf.090227.xyz-443-Trojan-WS-TLS
-  type: trojan
-  server: cf.090227.xyz
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
-- name: Snippets-vless
-  type: vless
-  server: mfa.gov.ua
-  port: 443
-  uuid: 204774c0-99c5-4454-bbd8-86775343a538
-  network:
-  - ws
-  udp: true
-  tls: true
-  servername: snip.soulbar.ggff.net
-- name: cfip.1323123.xyz-80-Trojan-WS
-  type: trojan
-  server: cfip.1323123.xyz
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cfip.1323123.xyz-443-Trojan-WS-TLS
-  type: trojan
-  server: cfip.1323123.xyz
-  port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
-  udp: true
 - name: 原生地址-443-WS-TLS
   type: vless
   server: boy.solobar.dpdns.org
@@ -1046,12 +951,6 @@ proxies:
   udp: true
   tls: true
   servername: boy.solobar.dpdns.org
-- name: 原生地址-80-Trojan-WS
-  type: trojan
-  server: boy.solobar.dpdns.org
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
 - name: 原生地址-80-WS
   type: vless
   server: boy.solobar.dpdns.org
@@ -1067,31 +966,96 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: cf.0sm.com-443-Trojan-WS-TLS
+- name: 原生地址-80-Trojan-WS
   type: trojan
-  server: cf.0sm.com
+  server: boy.solobar.dpdns.org
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: Snippets-vless
+  type: vless
+  server: cf.090227.xyz
+  port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: snip.soulbar.ggff.net
+- name: 加入频道@kejiland00-443-WS-TLS
+  type: vless
+  server: saas.sin.fan
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
+- name: cfip.cfcdn.vip-80-Trojan-WS
+  type: trojan
+  server: cfip.cfcdn.vip
+  port: 80
+  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  udp: true
+- name: trojan
+  type: trojan
+  server: 103.99.52.140
+  port: 18815
+  password: uCPeUyOJOB
+  sni: bing.com
+  udp: true
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+- name: vless-reality
+  type: vless
+  server: 103.99.52.140
+  port: 443
+  uuid: c16cf553-264e-4337-da22-9396c03f0a7a
+  flow: xtls-rprx-vision
+  network:
+  - tcp
+  udp: true
+  tls: true
+  servername: go.microsoft.com
+- name: cdn.2020111.xyz-443-Trojan-WS-TLS
+  type: trojan
+  server: cdn.2020111.xyz
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: cf.0sm.com-80-Trojan-WS
+- name: cdn.2020111.xyz-80-Trojan-WS
   type: trojan
-  server: cf.0sm.com
+  server: cdn.2020111.xyz
   port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   udp: true
-- name: cdn.tzpro.xyz-80-Trojan-WS
-  type: trojan
-  server: cdn.tzpro.xyz
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cdn.tzpro.xyz-443-Trojan-WS-TLS
-  type: trojan
-  server: cdn.tzpro.xyz
+- name: Snippets-vless
+  type: vless
+  server: cf.877774.xyz
   port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  network:
+  - ws
+  udp: true
+  tls: true
+  servername: snip.soulbar.ggff.net
+- name: xn--b6gac.eu.org-80-WS
+  type: vless
+  server: xn--b6gac.eu.org
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
+  udp: true
+- name: freeyx.cloudflare88.eu.org-80-Trojan-WS
+  type: trojan
+  server: freeyx.cloudflare88.eu.org
+  port: 80
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
   udp: true
 - name: cfip.cfcdn.vip-443-Trojan-WS-TLS
   type: trojan
@@ -1100,38 +1064,31 @@ proxies:
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: cfip.cfcdn.vip-80-Trojan-WS
-  type: trojan
-  server: cfip.cfcdn.vip
+- name: cf.zhetengsha.eu.org-80-WS
+  type: vless
+  server: cf.zhetengsha.eu.org
   port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
   udp: true
-- name: cloudflare-ip.mofashi.ltd-80-Trojan-WS
+- name: freeyx.cloudflare88.eu.org-443-Trojan-WS-TLS
   type: trojan
-  server: cloudflare-ip.mofashi.ltd
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
-- name: cloudflare-ip.mofashi.ltd-443-Trojan-WS-TLS
-  type: trojan
-  server: cloudflare-ip.mofashi.ltd
+  server: freeyx.cloudflare88.eu.org
   port: 443
   password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   sni: boy.solobar.dpdns.org
   udp: true
-- name: 115155.xyz-443-Trojan-WS-TLS
-  type: trojan
-  server: 115155.xyz
+- name: cf.zhetengsha.eu.org-443-WS-TLS
+  type: vless
+  server: cf.zhetengsha.eu.org
   port: 443
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  sni: boy.solobar.dpdns.org
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  network:
+  - ws
   udp: true
-- name: 115155.xyz-80-Trojan-WS
-  type: trojan
-  server: 115155.xyz
-  port: 80
-  password: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  udp: true
+  tls: true
+  servername: boy.solobar.dpdns.org
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -1145,147 +1102,140 @@ proxy-groups:
   interval: 600
   tolerance: 50
   proxies: &id001
-  - 联通-80-Trojan-WS
-  - 移动-80-WS
-  - 移动-443-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
-  - 移动-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
-  - 电信-80-WS
-  - 移动-80-Trojan-WS
   - 联通-80-WS
   - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 联通-80-Trojan-WS
   - 联通-80-WS
+  - 移动-80-WS
+  - 移动-443-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 移动-443-Trojan-WS-TLS
+  - 移动-443-Trojan-WS-TLS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-80-Trojan-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 移动-80-Trojan-WS
+  - 联通-80-Trojan-WS
+  - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-80-Trojan-WS
   - 移动-80-WS
   - 移动-80-Trojan-WS
   - 移动-80-Trojan-WS
   - 移动-443-Trojan-WS-TLS
-  - 移动-80-WS
-  - 联通-80-WS
-  - 移动-80-Trojan-WS
-  - 电信-443-Trojan-WS-TLS
-  - 联通-80-WS
-  - 联通-443-Trojan-WS-TLS
-  - 移动-443-WS-TLS
-  - 移动-443-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 电信-80-WS
-  - 电信-443-WS-TLS
-  - 移动-80-WS
-  - 电信-443-Trojan-WS-TLS
-  - 电信-80-WS
-  - 联通-443-WS-TLS
-  - 电信-443-WS-TLS
-  - 电信-80-Trojan-WS
   - 移动-443-Trojan-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
   - 移动-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 联通-80-Trojan-WS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 电信-80-Trojan-WS
-  - 电信-443-WS-TLS
   - 联通-80-WS
-  - 移动-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 移动-443-WS-TLS
-  - 电信-80-Trojan-WS
-  - 移动-443-WS-TLS
-  - 电信-443-Trojan-WS-TLS
-  - 移动-80-Trojan-WS
-  - 加入频道@kejiland00-443-Trojan-WS-TLS
+  - 联通-80-WS
+  - 联通-80-WS
   - 联通-443-WS-TLS
-  - 加入频道@kejiland00-443-WS-TLS
-  - US-443-Trojan-WS-TLS
+  - 联通-443-WS-TLS
   - US-17628-Trojan-WS-TLS
-  - US-17628-WS-TLS
+  - US-443-WS-TLS
+  - US-443-Trojan-WS-TLS
   - US-443-Trojan-WS-TLS
   - US-443-WS-TLS
-  - US-443-WS-TLS
+  - US-17628-WS-TLS
   - US-33388-Trojan-WS-TLS
   - US-33388-WS-TLS
-  - CA-16504-WS-TLS
   - US-38945-Trojan-WS-TLS
   - US-38945-WS-TLS
+  - cf.zhetengsha.eu.org-80-Trojan-WS
+  - cf.zhetengsha.eu.org-443-Trojan-WS-TLS
+  - cf.090227.xyz-80-Trojan-WS
+  - 加入频道@kejiland00-443-Trojan-WS-TLS
+  - Snippets-vless
+  - US-41389-WS-TLS
+  - US-41389-Trojan-WS-TLS
+  - cf.0sm.com-80-Trojan-WS
+  - cf.090227.xyz-443-Trojan-WS-TLS
+  - Snippets-vless
+  - CA-16504-WS-TLS
   - CA-16504-Trojan-WS-TLS
   - US-8443-WS-TLS
   - US-8443-Trojan-WS-TLS
-  - US-41389-Trojan-WS-TLS
-  - US-41389-WS-TLS
-  - Snippets-vless
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - GB-42515-WS-TLS
-  - JP-8443-WS-TLS
-  - GB-42515-Trojan-WS-TLS
-  - JP-45681-Trojan-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - JP-8443-Trojan-WS-TLS
-  - IT-10443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - IT-10443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - DE-2053-Trojan-WS-TLS
-  - DE-2053-WS-TLS
-  - JP-45681-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - DE-8443-Trojan-WS-TLS
-  - DE-443-WS-TLS
-  - SE-8443-WS-TLS
-  - SE-48004-Trojan-WS-TLS
-  - SE-48004-WS-TLS
-  - SE-2053-WS-TLS
-  - DE-8443-WS-TLS
-  - AT-443-Trojan-WS-TLS
-  - AT-443-WS-TLS
-  - SE-8443-Trojan-WS-TLS
-  - SE-2053-Trojan-WS-TLS
-  - DE-443-Trojan-WS-TLS
-  - PL-2053-WS-TLS
-  - PL-2053-Trojan-WS-TLS
-  - RU-443-Trojan-WS-TLS
-  - RU-443-WS-TLS
-  - cf.zhetengsha.eu.org-80-Trojan-WS
-  - cf.zhetengsha.eu.org-443-Trojan-WS-TLS
   - xn--b6gac.eu.org-80-Trojan-WS
   - xn--b6gac.eu.org-443-Trojan-WS-TLS
-  - SG-61731-WS-TLS
-  - SG-61731-Trojan-WS-TLS
   - cf.877771.xyz-80-Trojan-WS
+  - cdn.tzpro.xyz-80-Trojan-WS
   - cf.877771.xyz-443-Trojan-WS-TLS
-  - vless-reality
+  - JP-45681-Trojan-WS-TLS
+  - JP-8443-Trojan-WS-TLS
+  - JP-8443-WS-TLS
+  - JP-45681-WS-TLS
+  - cdn.tzpro.xyz-443-Trojan-WS-TLS
+  - GB-42515-WS-TLS
+  - GB-42515-Trojan-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - DE-8443-WS-TLS
+  - DE-2053-WS-TLS
+  - DE-443-WS-TLS
+  - DE-443-Trojan-WS-TLS
+  - DE-2053-Trojan-WS-TLS
+  - IT-10443-WS-TLS
+  - IT-10443-Trojan-WS-TLS
+  - DE-8443-Trojan-WS-TLS
+  - DE-443-WS-TLS
+  - DE-443-Trojan-WS-TLS
+  - SE-48004-Trojan-WS-TLS
+  - AT-443-Trojan-WS-TLS
+  - PL-2053-WS-TLS
+  - SG-61731-Trojan-WS-TLS
+  - SG-61731-WS-TLS
+  - PL-2053-Trojan-WS-TLS
+  - AT-443-WS-TLS
+  - SE-8443-Trojan-WS-TLS
+  - SE-8443-WS-TLS
+  - SE-2053-WS-TLS
+  - SE-48004-WS-TLS
+  - SE-2053-Trojan-WS-TLS
+  - RU-443-Trojan-WS-TLS
+  - RU-443-WS-TLS
+  - cf.0sm.com-443-Trojan-WS-TLS
   - IN-2053-WS-TLS
   - IN-2053-Trojan-WS-TLS
-  - trojan
   - Snippets-vless
-  - cf.090227.xyz-80-Trojan-WS
-  - cf.090227.xyz-443-Trojan-WS-TLS
-  - Snippets-vless
-  - cfip.1323123.xyz-80-Trojan-WS
-  - cfip.1323123.xyz-443-Trojan-WS-TLS
   - 原生地址-443-WS-TLS
-  - 原生地址-80-Trojan-WS
   - 原生地址-80-WS
   - 原生地址-443-Trojan-WS-TLS
-  - cf.0sm.com-443-Trojan-WS-TLS
-  - cf.0sm.com-80-Trojan-WS
-  - cdn.tzpro.xyz-80-Trojan-WS
-  - cdn.tzpro.xyz-443-Trojan-WS-TLS
-  - cfip.cfcdn.vip-443-Trojan-WS-TLS
+  - 原生地址-80-Trojan-WS
+  - Snippets-vless
+  - 加入频道@kejiland00-443-WS-TLS
   - cfip.cfcdn.vip-80-Trojan-WS
-  - cloudflare-ip.mofashi.ltd-80-Trojan-WS
-  - cloudflare-ip.mofashi.ltd-443-Trojan-WS-TLS
-  - 115155.xyz-443-Trojan-WS-TLS
-  - 115155.xyz-80-Trojan-WS
+  - trojan
+  - vless-reality
+  - cdn.2020111.xyz-443-Trojan-WS-TLS
+  - cdn.2020111.xyz-80-Trojan-WS
+  - Snippets-vless
+  - xn--b6gac.eu.org-80-WS
+  - freeyx.cloudflare88.eu.org-80-Trojan-WS
+  - cfip.cfcdn.vip-443-Trojan-WS-TLS
+  - cf.zhetengsha.eu.org-80-WS
+  - freeyx.cloudflare88.eu.org-443-Trojan-WS-TLS
+  - cf.zhetengsha.eu.org-443-WS-TLS
 - name: 🛡️ 故障转移
   type: fallback
   url: https://cp.cloudflare.com
@@ -1329,147 +1279,140 @@ proxy-groups:
 - name: 🌐 手动切换
   type: select
   proxies:
-  - 联通-80-Trojan-WS
-  - 移动-80-WS
-  - 移动-443-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
-  - 移动-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
-  - 电信-80-WS
-  - 移动-80-Trojan-WS
   - 联通-80-WS
   - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 联通-80-Trojan-WS
   - 联通-80-WS
+  - 移动-80-WS
+  - 移动-443-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 移动-443-Trojan-WS-TLS
+  - 移动-443-Trojan-WS-TLS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-80-Trojan-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-443-WS-TLS
+  - 移动-443-WS-TLS
+  - 移动-80-Trojan-WS
+  - 联通-80-Trojan-WS
+  - 移动-80-WS
+  - 联通-443-Trojan-WS-TLS
+  - 联通-80-Trojan-WS
+  - 移动-80-Trojan-WS
   - 移动-80-WS
   - 移动-80-Trojan-WS
   - 移动-80-Trojan-WS
   - 移动-443-Trojan-WS-TLS
-  - 移动-80-WS
-  - 联通-80-WS
-  - 移动-80-Trojan-WS
-  - 电信-443-Trojan-WS-TLS
-  - 联通-80-WS
-  - 联通-443-Trojan-WS-TLS
-  - 移动-443-WS-TLS
-  - 移动-443-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 电信-80-WS
-  - 电信-443-WS-TLS
-  - 移动-80-WS
-  - 电信-443-Trojan-WS-TLS
-  - 电信-80-WS
-  - 联通-443-WS-TLS
-  - 电信-443-WS-TLS
-  - 电信-80-Trojan-WS
   - 移动-443-Trojan-WS-TLS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-443-WS-TLS
   - 移动-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 联通-80-Trojan-WS
-  - 联通-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 电信-80-Trojan-WS
-  - 电信-443-WS-TLS
   - 联通-80-WS
-  - 移动-443-Trojan-WS-TLS
-  - 联通-80-Trojan-WS
-  - 移动-443-WS-TLS
-  - 电信-80-Trojan-WS
-  - 移动-443-WS-TLS
-  - 电信-443-Trojan-WS-TLS
-  - 移动-80-Trojan-WS
-  - 加入频道@kejiland00-443-Trojan-WS-TLS
+  - 联通-80-WS
+  - 联通-80-WS
   - 联通-443-WS-TLS
-  - 加入频道@kejiland00-443-WS-TLS
-  - US-443-Trojan-WS-TLS
+  - 联通-443-WS-TLS
   - US-17628-Trojan-WS-TLS
-  - US-17628-WS-TLS
+  - US-443-WS-TLS
+  - US-443-Trojan-WS-TLS
   - US-443-Trojan-WS-TLS
   - US-443-WS-TLS
-  - US-443-WS-TLS
+  - US-17628-WS-TLS
   - US-33388-Trojan-WS-TLS
   - US-33388-WS-TLS
-  - CA-16504-WS-TLS
   - US-38945-Trojan-WS-TLS
   - US-38945-WS-TLS
+  - cf.zhetengsha.eu.org-80-Trojan-WS
+  - cf.zhetengsha.eu.org-443-Trojan-WS-TLS
+  - cf.090227.xyz-80-Trojan-WS
+  - 加入频道@kejiland00-443-Trojan-WS-TLS
+  - Snippets-vless
+  - US-41389-WS-TLS
+  - US-41389-Trojan-WS-TLS
+  - cf.0sm.com-80-Trojan-WS
+  - cf.090227.xyz-443-Trojan-WS-TLS
+  - Snippets-vless
+  - CA-16504-WS-TLS
   - CA-16504-Trojan-WS-TLS
   - US-8443-WS-TLS
   - US-8443-Trojan-WS-TLS
-  - US-41389-Trojan-WS-TLS
-  - US-41389-WS-TLS
-  - Snippets-vless
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - GB-42515-WS-TLS
-  - JP-8443-WS-TLS
-  - GB-42515-Trojan-WS-TLS
-  - JP-45681-Trojan-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - JP-8443-Trojan-WS-TLS
-  - IT-10443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - IT-10443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - DE-2053-Trojan-WS-TLS
-  - DE-2053-WS-TLS
-  - JP-45681-WS-TLS
-  - NL-443-Trojan-WS-TLS
-  - NL-443-WS-TLS
-  - DE-8443-Trojan-WS-TLS
-  - DE-443-WS-TLS
-  - SE-8443-WS-TLS
-  - SE-48004-Trojan-WS-TLS
-  - SE-48004-WS-TLS
-  - SE-2053-WS-TLS
-  - DE-8443-WS-TLS
-  - AT-443-Trojan-WS-TLS
-  - AT-443-WS-TLS
-  - SE-8443-Trojan-WS-TLS
-  - SE-2053-Trojan-WS-TLS
-  - DE-443-Trojan-WS-TLS
-  - PL-2053-WS-TLS
-  - PL-2053-Trojan-WS-TLS
-  - RU-443-Trojan-WS-TLS
-  - RU-443-WS-TLS
-  - cf.zhetengsha.eu.org-80-Trojan-WS
-  - cf.zhetengsha.eu.org-443-Trojan-WS-TLS
   - xn--b6gac.eu.org-80-Trojan-WS
   - xn--b6gac.eu.org-443-Trojan-WS-TLS
-  - SG-61731-WS-TLS
-  - SG-61731-Trojan-WS-TLS
   - cf.877771.xyz-80-Trojan-WS
+  - cdn.tzpro.xyz-80-Trojan-WS
   - cf.877771.xyz-443-Trojan-WS-TLS
-  - vless-reality
+  - JP-45681-Trojan-WS-TLS
+  - JP-8443-Trojan-WS-TLS
+  - JP-8443-WS-TLS
+  - JP-45681-WS-TLS
+  - cdn.tzpro.xyz-443-Trojan-WS-TLS
+  - GB-42515-WS-TLS
+  - GB-42515-Trojan-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-WS-TLS
+  - NL-443-Trojan-WS-TLS
+  - DE-8443-WS-TLS
+  - DE-2053-WS-TLS
+  - DE-443-WS-TLS
+  - DE-443-Trojan-WS-TLS
+  - DE-2053-Trojan-WS-TLS
+  - IT-10443-WS-TLS
+  - IT-10443-Trojan-WS-TLS
+  - DE-8443-Trojan-WS-TLS
+  - DE-443-WS-TLS
+  - DE-443-Trojan-WS-TLS
+  - SE-48004-Trojan-WS-TLS
+  - AT-443-Trojan-WS-TLS
+  - PL-2053-WS-TLS
+  - SG-61731-Trojan-WS-TLS
+  - SG-61731-WS-TLS
+  - PL-2053-Trojan-WS-TLS
+  - AT-443-WS-TLS
+  - SE-8443-Trojan-WS-TLS
+  - SE-8443-WS-TLS
+  - SE-2053-WS-TLS
+  - SE-48004-WS-TLS
+  - SE-2053-Trojan-WS-TLS
+  - RU-443-Trojan-WS-TLS
+  - RU-443-WS-TLS
+  - cf.0sm.com-443-Trojan-WS-TLS
   - IN-2053-WS-TLS
   - IN-2053-Trojan-WS-TLS
-  - trojan
   - Snippets-vless
-  - cf.090227.xyz-80-Trojan-WS
-  - cf.090227.xyz-443-Trojan-WS-TLS
-  - Snippets-vless
-  - cfip.1323123.xyz-80-Trojan-WS
-  - cfip.1323123.xyz-443-Trojan-WS-TLS
   - 原生地址-443-WS-TLS
-  - 原生地址-80-Trojan-WS
   - 原生地址-80-WS
   - 原生地址-443-Trojan-WS-TLS
-  - cf.0sm.com-443-Trojan-WS-TLS
-  - cf.0sm.com-80-Trojan-WS
-  - cdn.tzpro.xyz-80-Trojan-WS
-  - cdn.tzpro.xyz-443-Trojan-WS-TLS
-  - cfip.cfcdn.vip-443-Trojan-WS-TLS
+  - 原生地址-80-Trojan-WS
+  - Snippets-vless
+  - 加入频道@kejiland00-443-WS-TLS
   - cfip.cfcdn.vip-80-Trojan-WS
-  - cloudflare-ip.mofashi.ltd-80-Trojan-WS
-  - cloudflare-ip.mofashi.ltd-443-Trojan-WS-TLS
-  - 115155.xyz-443-Trojan-WS-TLS
-  - 115155.xyz-80-Trojan-WS
+  - trojan
+  - vless-reality
+  - cdn.2020111.xyz-443-Trojan-WS-TLS
+  - cdn.2020111.xyz-80-Trojan-WS
+  - Snippets-vless
+  - xn--b6gac.eu.org-80-WS
+  - freeyx.cloudflare88.eu.org-80-Trojan-WS
+  - cfip.cfcdn.vip-443-Trojan-WS-TLS
+  - cf.zhetengsha.eu.org-80-WS
+  - freeyx.cloudflare88.eu.org-443-Trojan-WS-TLS
+  - cf.zhetengsha.eu.org-443-WS-TLS
   - DIRECT
 rules:
 - DOMAIN-SUFFIX,youtube.com,📺 YouTube
